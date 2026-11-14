@@ -35,7 +35,8 @@
       "effect": {
         "name": "leaves",
         "when": "open"
-      }
+      },
+      "sample": "leaves"
     },
     {
       "id": "welcome",
