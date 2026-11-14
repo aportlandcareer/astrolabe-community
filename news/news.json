@@ -25,11 +25,11 @@
           "look": "leaves"
         },
         {
-          "kind": "chat",
+          "kind": "studio",
           "label": "Make my entry",
           "intent": "mark-contest",
           "hint": "Send it, and your brain starts your entry with you.",
-          "phrase": "I want to enter the Thanksgiving mark contest. Follow MARK-CONTEST.md: ask me about my idea, then build my at-rest and thinking looks with me on my own mark so I can watch them change."
+          "phrase": "I want to enter the Thanksgiving mark contest. Follow MARK-CONTEST.md: my Mark Studio is open beside this chat. Ask me about my idea, then build my resting and thinking looks with me there."
         }
       ],
       "effect": {
