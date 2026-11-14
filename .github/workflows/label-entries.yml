@@ -1,0 +1,18 @@
+# An entry an agent opens from the command line can't set its own label,
+# so any issue titled "Thanksgiving mark: ..." gets the contest label here.
+name: Label contest entries
+on:
+  issues:
+    types: [opened, edited]
+permissions:
+  issues: write
+jobs:
+  label:
+    if: startsWith(github.event.issue.title, 'Thanksgiving mark:')
+    runs-on: ubuntu-latest
+    steps:
+      - run: gh issue edit "$NUMBER" --repo "$REPO" --add-label thanksgiving-2026
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
