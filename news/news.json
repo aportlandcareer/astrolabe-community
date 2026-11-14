@@ -10,14 +10,32 @@
         "Our logo and wordmark are made of little nodes, and this Thanksgiving we'd love to see what you'd make of them. Design a holiday version of the Astrolabe mark at the top of your page, with one look for when your brain is resting and one for when it's thinking.",
         "Maybe the globe turns into a pie with a lattice crust, the letters drift down like autumn leaves while your brain thinks, or every node glows the warm orange of candles on a long table. Silly, beautiful and strange entries are all welcome.",
         "You build it with your agent. Press Make my entry, describe your idea in your own words, and watch your own mark change as you go. When you love it, your agent sends it to Dan and Danny with your handle, plus an optional message for everyone and a link to something good for the community, like a project you're building or a cause you care about.",
+        "For a little inspiration, Dan made falling leaves that drift through the mark's own nodes and blow around when you hover over them. Press Try Dan's leaves to see them on your mark, and press it again to put your usual mark back. If your idea needs more than a look in CSS can do, describe it in your entry and we'll build it for the release.",
         "We'll pick a winner and ship their design to every member in our next release, with their name, message and link beside it. Entries close Sunday, November 22, and we'll share the winner the day before Thanksgiving."
       ],
       "actions": [
-        { "kind": "link", "label": "See the entries", "url": "https://github.com/aportlandcareer/astrolabe-community/issues" },
-        { "kind": "chat", "label": "Make my entry", "intent": "mark-contest", "hint": "Send it, and your brain starts your entry with you.",
-          "phrase": "I want to enter the Thanksgiving mark contest. Follow MARK-CONTEST.md: ask me about my idea, then build my at-rest and thinking looks with me on my own mark so I can watch them change." }
+        {
+          "kind": "link",
+          "label": "See the entries",
+          "url": "https://github.com/aportlandcareer/astrolabe-community/issues"
+        },
+        {
+          "kind": "look",
+          "label": "Try Dan's leaves",
+          "look": "leaves"
+        },
+        {
+          "kind": "chat",
+          "label": "Make my entry",
+          "intent": "mark-contest",
+          "hint": "Send it, and your brain starts your entry with you.",
+          "phrase": "I want to enter the Thanksgiving mark contest. Follow MARK-CONTEST.md: ask me about my idea, then build my at-rest and thinking looks with me on my own mark so I can watch them change."
+        }
       ],
-      "effect": { "name": "leaves", "when": "open" }
+      "effect": {
+        "name": "leaves",
+        "when": "open"
+      }
     },
     {
       "id": "welcome",
